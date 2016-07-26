@@ -1,0 +1,79 @@
+// Interface Class
+
+package Session6;
+
+public interface PrintNumber {
+	
+	public abstract void printnum(int num);
+
+}
+
+// Implements the Interface Class
+
+package Session6;
+
+import java.util.Scanner;
+
+public class InterfaceAssignment implements PrintNumber {
+	
+	static int num;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);	
+        
+      	System.out.print("Enter an integer value: ");
+      	
+      	num = scan.nextInt();
+		
+                   	
+          	InterfaceAssignment intas = new InterfaceAssignment();
+          	
+          	intas.printnum();
+          	intas.printnum(num);
+          	
+          	//intas.Squarenum(num);
+          	
+          	
+          	
+          	
+	}
+
+	public void printnum() {
+		// TODO Auto-generated method stub
+		
+		
+		
+		System.out.println("The Entered Value is: " + num);
+		
+	}
+
+	@Override
+	public void printnum(int num) {
+		// TODO Auto-generated method stub
+		
+		int sq = num * num;
+		
+		System.out.println("Square Root of the Value: " + sq);
+		
+		
+	}
+	
+	
+
+}
+
+
+/*  Output
+Enter an integer value: 5
+The Entered Value is: 5
+Square Root of the Value: 25
+
+
+
+*/
+
+
+
+
